@@ -7,16 +7,16 @@ import SignPad from './components/SignPad';
 
 
 const Form = () => {
-  const [state, handleSubmit] = useForm("mnnnrqjz");
+  const [state, handleSubmit] = useForm("xpwwnrzl");
   const [media, setMedia] = useState([]);
   const [signature, setSignature] = useState(null);
 
   useEffect(() => {
     if (signature) {
-      console.log('Signature:', signature);
+      // console.log('Signature:', signature);
     }
-    console.log('Media:', media);
-    console.log('state:', state);
+    // console.log('Media:', media);
+    // console.log('state:', state);
   }, [signature, state, media, handleSubmit]);
   
   if (state.succeeded) {
@@ -45,140 +45,143 @@ const Form = () => {
         
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <Label kol={'name'} text='1. Enter your full Name' />
+            <Label kol={'Full Name'} text='1. Enter your Full Name' />
             <div className='flex gap-4'>
-                <Input type='text' id='fname' name='fname' place='First Name' required />
-                <Input type='text' id='lname' name='lname' place='Last Name' required />
+                <Input type='text' id='fname' name='First Name' place='First Name' required />
+                <Input type='text' id='lname' name='Last Name' place='Last Name' required />
             </div>
           </div>
 
           <div>
-            <Label kol={'email'} text='2. Enter your email address' />
-            <Input type='email' id='email' name='email' place='you@example.com' required />
+            <Label kol={'Email Address'} text='2. Enter your email address' />
+            <Input type='email' id='email' name='Email Address' place='you@example.com' required />
             <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
 
           <div>
-            <Label kol={'address'} text='3. Address' />
-            <Input type='address' id='email' name='address' place='Address' required />
+            <Label kol={'Address'} text='3. Address' />
+            <Input type='address' id='address' name='Address' place='Address' required />
             <ValidationError prefix="Address" field="address" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
 
           <div>
-            <Label kol={'phone'} text='4. Phone number' />
-            <Input type='phone' id='phone' name='phone' place='Phone' required />
+            <Label kol={'Phone Number'} text='4. Phone number' />
+            <Input type='phone' id='phone' name='Phone Number' place='Phone' required />
             <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
 
           <div>
-            <Label kol={'marry'} text='5. Are you married' />
-            <Input type='text' id='marry' name='marry' place='' required />
-            <ValidationError prefix="Marry" field="marry" errors={state.errors} className="text-red-500 text-sm mt-1" />
+            <Label kol={'Marriage Status'} text='5. Are you married' />
+            <Input type='text' id='marriage' name='Marriage Status' place='' required />
+            <ValidationError prefix="Marriage Status" field="marriage" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
 
           <div>
-            <Label kol={'kids'} text='6. Do you have kids' />
-            <Input type='text' id='kids' name='kids' place='' required />
-            <ValidationError prefix="Kids" field="kids" errors={state.errors} className="text-red-500 text-sm mt-1" />
+            <Label kol={'Have Kids'} text='6. Do you have kids' />
+            <Input type='text' id='kids' name='Have Kids' place='' required />
+            <ValidationError prefix="Have Kids" field="kids" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
           
           <div>
-            <Label kol={'pets'} text='7. Do you have Pets' />
-            <Input type='text' id='pets' name='pets' place='' required />
-            <ValidationError prefix="Pets" field="pets" errors={state.errors} className="text-red-500 text-sm mt-1" />
+            <Label kol={'Have Pets'} text='7. Do you have Pets' />
+            <Input type='text' id='pets' name='Have Pets' place='' required />
+            <ValidationError prefix="Have Pets" field="pets" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
           <div>
-            <Label kol={'car'} text='8. Do you have car' />
-            <Input type='text' id='car' name='car' place='' required />
-            <ValidationError prefix="Car" field="car" errors={state.errors} className="text-red-500 text-sm mt-1" />
+            <Label kol={'Have Car'} text='8. Do you have car' />
+            <Input type='text' id='car' name='Have Car' place='' required />
+            <ValidationError prefix="Have Car" field="car" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
           <div>
-            <Label kol={'occupation'} text='9. Occupation' />
-            <Input type='text' id='occupation' name='occupation' place='' required />
+            <Label kol={'Occupation'} text='9. Occupation' />
+            <Input type='text' id='occupation' name='Occupation' place='' required />
             <ValidationError prefix="Occupation" field="occupation" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
           <div>
-            <Label kol={'no'} text='10. How many people will be living in the house' />
-            <Input type='number' id='no' name='no' place='' required />
-            <ValidationError prefix="No" field="no" errors={state.errors} className="text-red-500 text-sm mt-1" />
+            <Label kol={'Number of Residents'} text='10. How many people will be living in the house' />
+            <Input type='number' id='residents' name='Number of Residents' place='' required />
+            <ValidationError prefix="Number of Residents" field="residents" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
           <div>
-            <Label kol={'income'} text='11. Monthly income' />
-            <Input type='text' id='income' name='income' place='' required />
-            <ValidationError prefix="Income" field="income" errors={state.errors} className="text-red-500 text-sm mt-1" />
+            <Label kol={'Monthly Income'} text='11. Monthly income' />
+            <Input type='text' id='income' name='Monthly Income' place='' required />
+            <ValidationError prefix="Monthly Income" field="income" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
           <div>
-            <Label kol={'soon'} text='12. How soon do you intend moving in' />
-            <Input type='text' id='soon' name='soon' place='' required />
-            <ValidationError prefix="Soon" field="soon" errors={state.errors} className="text-red-500 text-sm mt-1" />
+            <Label kol={'Move-in Timeline'} text='12. How soon do you intend moving in' />
+            <Input type='text' id='moveIn' name='Move-in Timeline' place='' required />
+            <ValidationError prefix="Move-in Timeline" field="moveIn" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
           <div>
-            <Label kol={'date'} text='13. Date' />
-            <Input type='date' id='date' name='date' place='' required />
-            <ValidationError prefix="Date" field="date" errors={state.errors} className="text-red-500 text-sm mt-1" />
+            <Label kol={'Application Date'} text='13. Date' />
+            <Input type='date' id='date' name='Application Date' place='' required />
+            <ValidationError prefix="Application Date" field="date" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
           <div>
-            <Label kol={'license'} text='14. A picture of occupant/Driver’s license' />
+            <Label kol={'License Photo'} text='14. A picture of occupant/Drivers license' />
             <CreateMediaPost media={media} setMedia={setMedia} />
-            {/* <Input type='file' id='license' name='license' place='Phone' required /> */}
-            <ValidationError prefix="License" field="license" errors={state.errors} className="text-red-500 text-sm mt-1" />
+            <ValidationError prefix="License Photo" field="license" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
           <div>
-            <Label kol={'deposit'} text='15. How soon you make the security deposit payment' />
-            <Input type='text' id='deposit' name='deposit' place='' required />
-            <ValidationError prefix="Deposit" field="deposit" errors={state.errors} className="text-red-500 text-sm mt-1" />
+            <Label kol={'Security Deposit Timeline'} text='15. How soon you make the security deposit payment' />
+            <Input type='text' id='deposit' name='Security Deposit Timeline' place='' required />
+            <ValidationError prefix="Security Deposit Timeline" field="deposit" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
           <div>
-            <Label kol={'keys'} text='16. How soon do you want to get the keys' />
-            <Input type='text' id='keys' name='keys' place='' required />
-            <ValidationError prefix="Keys" field="keys" errors={state.errors} className="text-red-500 text-sm mt-1" />
+            <Label kol={'Keys Timeline'} text='16. How soon do you want to get the keys' />
+            <Input type='text' id='keys' name='Keys Timeline' place='' required />
+            <ValidationError prefix="Keys Timeline" field="keys" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
           <div>
-            <Label kol={'smoke'} text='17. Do you smoke' />
+            <Label kol={'Smoking Status'} text='17. Do you smoke' />
             <div className='flex space-x-2'>
                 <div className='w-1/2'>
-                    <Radio name={'smoke'} id={'smoke'} value={'yes'} label={'Yes'} />
+                    <Radio name={'Smoking Status'} id={'smoke'} value={'yes'} label={'Yes'} />
                 </div>
                 <div className='w-1/2'>
-                    <Radio name={'smoke'} id={'smoke'} value={'no'} label={'No'} />
+                    <Radio name={'Smoking Status'} id={'smoke'} value={'no'} label={'No'} />
                 </div>
             </div>
-            <ValidationError prefix="Keys" field="keys" errors={state.errors} className="text-red-500 text-sm mt-1" />
+            <ValidationError prefix="Smoking Status" field="smoke" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
           <div>
-            <Label kol={'adults'} text='18. How many adults are moving in' />
-            <Input type='text' id='adults' name='adults' place='' required />
-            <ValidationError prefix="Adults" field="adults" errors={state.errors} className="text-red-500 text-sm mt-1" />
+            <Label kol={'Number of Adults'} text='18. How many adults are moving in' />
+            <Input type='text' id='adults' name='Number of Adults' place='' required />
+            <ValidationError prefix="Number of Adults" field="adults" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
 
           <div>
-            <Label kol={'convict'} text='19. Have you ever been convicted of any crime?' />
+            <Label kol={'Criminal Record'} text='19. Have you ever been convicted of any crime?' />
             <div className='flex space-x-2'>
                 <div className='w-1/2'>
-                    <Radio name={'convict'} id={'convict'} value={'yes'} label={'Yes'} />
+                    <Radio name={'Criminal Record'} id={'convict'} value={'yes'} label={'Yes'} />
                 </div>
                 <div className='w-1/2'>
-                    <Radio name={'convict'} id={'convict'} value={'no'} label={'No'} />
+                    <Radio name={'Criminal Record'} id={'convict'} value={'no'} label={'No'} />
                 </div>
             </div>
-            <ValidationError prefix="Keys" field="keys" errors={state.errors} className="text-red-500 text-sm mt-1" />
+            <ValidationError prefix="Criminal Record" field="convict" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
 
           <div>
-            <Label kol={'evict'} text='20. If yes, have you been evicted' />
+            <Label kol={'Eviction History'} text='20. If yes, have you been evicted' />
             <div className='flex space-x-2'>
                 <div className='w-1/2'>
-                    <Radio name={'evict'} id={'evict'} value={'yes'} label={'Yes'} />
+                    <Radio name={'Eviction History'} id={'evict'} value={'yes'} label={'Yes'} />
                 </div>
                 <div className='w-1/2'>
-                    <Radio name={'evict'} id={'evict'} value={'no'} label={'No'} />
+                    <Radio name={'Eviction History'} id={'evict'} value={'no'} label={'No'} />
                 </div>
             </div>
-            <ValidationError prefix="Keys" field="keys" errors={state.errors} className="text-red-500 text-sm mt-1" />
+            <ValidationError prefix="Eviction History" field="evict" errors={state.errors} className="text-red-500 text-sm mt-1" />
+          </div>
+
+          <div className='text-white font-semibold'>
+            <h3>Note : Dear Ocupant, you are to pay a refundable fee of <span className='font-bold'>$85 </span> which is meant for the application fee. It will be refunded immediately if you don't like the property after viewing.</h3>
           </div>
 
           <div>
-            <Label kol={'paymentMethod'} text='21. How do you want to make the payment for the application fee?' />
+            <Label kol={'Payment Method'} text='21. How do you want to make the payment for the application fee?' />
             <div className="space-y-3">
             {[
               "Cash App",
@@ -189,9 +192,9 @@ const Form = () => {
               "Apple Pay",
               "Google Pay",
               "Bitcoin",
-            ].map((method) => (
+            ].map((method, i) => (
               <div className='py-3 pl-5 bg-[#444343] rounded-2xl'>
-                  <label key={method} className="flex items-center text-white font-semibold space-x-2">
+                  <label key={i} className="flex items-center text-white font-semibold space-x-2">
                     <input
                       type="checkbox"
                       name="paymentMethod"
@@ -203,29 +206,27 @@ const Form = () => {
               </div>
             ))}
           </div>
-            <ValidationError prefix="Keys" field="keys" errors={state.errors} className="text-red-500 text-sm mt-1" />
+            <ValidationError prefix="Payment Method" field="paymentMethod" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
 
           <div>
-            <Label kol={'payment'} text='22. Have you make the payment for the application fee' />
+            <Label kol={'Payment Confirmation'} text='22. Have you make the payment for the application fee' />
             <div className='flex space-x-2'>
                 <div className='w-1/2'>
-                    <Radio name={'payment'} id={'payment'} value={'yes'} label={'Yes'} />
+                    <Radio name={'Payment Confirmation'} id={'payment'} value={'yes'} label={'Yes'} />
                 </div>
                 <div className='w-1/2'>
-                    <Radio name={'payment'} id={'payment'} value={'no'} label={'No'} />
+                    <Radio name={'Payment Confirmation'} id={'payment'} value={'no'} label={'No'} />
                 </div>
             </div>
-            <ValidationError prefix="Keys" field="keys" errors={state.errors} className="text-red-500 text-sm mt-1" />
+            <ValidationError prefix="Payment Confirmation" field="payment" errors={state.errors} className="text-red-500 text-sm mt-1" />
           </div>
 
-
-
           {/* <div>
-            <label htmlFor="petType" className="block text-lightBlack font-medium mb-2">
-              What type of pet do you have?
-            </label>
-            <select
+            <Label kol={'Signature'} text='23. Please sign below to confirm all information is correct' />
+            <SignPad onSave={(signatureData) => setSignature(signatureData)} />
+            <ValidationError prefix="Signature" field="signature" errors={state.errors} className="text-red-500 text-sm mt-1" />
+          </div>
               id="petType"
               name="petType"
               className="w-full px-4 py-2 border border-semiWhite rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
@@ -236,7 +237,7 @@ const Form = () => {
               <option value="bird">Bird</option>
               <option value="other">Other</option>
             </select>
-          </div> */}
+          </div> */} 
 
           {/* <div>
             <label htmlFor="message" className="block text-lightBlack font-medium mb-2">
