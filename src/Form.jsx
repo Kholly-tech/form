@@ -264,7 +264,7 @@ const Form = () => {
             disabled={state.submitting}
             className="w-full bg-primary hover:bg-opacity-90 text-white font-medium py-3 px-6 rounded-lg transition duration-300 disabled:opacity-50"
           >
-            {state.submitting ? 'Sending...' : 'Subscribe Now'}
+            {state.submitting ? 'Sending...' : 'Submit'}
           </button>
         </form>
       </div>
