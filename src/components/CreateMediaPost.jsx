@@ -109,7 +109,7 @@ const CreateMediaPost = ({ media, setMedia }) => {
       <input
         type="file"
         multiple
-        accept="image/jpeg,image/png,image/gif,image/jpg,video/mp4,video/mov,video/mpeg,video/mkv, video/webm"
+        accept="image/jpeg,image/png,image/gif,image/jpg"
         hidden
         ref={mediaInputRef}
         onChange={handleMediaUpload}
