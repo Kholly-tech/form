@@ -11,7 +11,7 @@ const Form = () => {
   const [media, setMedia] = useState([]);
   const [signature, setSignature] = useState(null);
 
-  useEffect(() => {
+  useEffect(() => { 
     if (signature) {
       // console.log('Signature:', signature);
     }
